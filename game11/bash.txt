@@ -1,0 +1,9 @@
+cd z:
+cd ƒQ[ƒ€‚Ì‚Æ‚±‚ë‚Ü‚Å‚Æ‚Ô
+
+git status
+git add .
+git status
+git commit -m "©•ª‚ª‚â‚Á‚½‚È‚¢‚æ‚¤‚Ì•Û‘¶"
+git pull --no-edit
+git push ¦‚±‚ê‚Í©•ª‚Ìì‹Æ‚ğXV
