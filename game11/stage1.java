@@ -21,9 +21,5 @@ public class stage1 extends World
         showText("制作なう", 300, 300);
         addObject( new textbox(), 300, 300 );
         textbox textbox = new textbox();
-        if (Greenfoot.mouseClicked(textbox)) // クリックされたら
-        {
-            Greenfoot.setWorld(new stage1()); // 切り替え
-        }
     }
 }

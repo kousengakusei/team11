@@ -20,9 +20,5 @@ public class textbox extends Actor
         {
             Greenfoot.setWorld(new stage1()); // 切り替え
         }
-        if (Greenfoot.mouseClicked(this)){
-            
-            Greenfoot.setWorld(new Stage2()); // 切り替え
-        }    
-    }
+    }    
 }
