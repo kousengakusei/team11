@@ -12,7 +12,7 @@ public class textbox extends Actor
      * Act - do whatever the textbox wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
         // Add your action code here.
         getImage().setTransparency(128);
@@ -20,5 +20,9 @@ public class textbox extends Actor
         {
             Greenfoot.setWorld(new stage1()); // 切り替え
         }
-    }    
+        if (Greenfoot.mouseClicked(this)){
+            
+            Greenfoot.setWorld(new Stage2()); // 切り替え
+        }    
+    }
 }
