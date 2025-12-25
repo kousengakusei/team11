@@ -16,9 +16,5 @@ public class textbox extends Actor
     {
         // Add your action code here.
         getImage().setTransparency(128);
-        if (Greenfoot.mouseClicked(this)) // クリックされたら
-        {
-            Greenfoot.setWorld(new stage1()); // 切り替え
-        }
     }    
 }
