@@ -19,9 +19,12 @@ public class gameover extends World
         GreenfootImage image = new GreenfootImage(600,400);
         image.setColor(Color.BLACK);
         image.fill();
-        showText("game over", 300, 300);
-        if(Greenfoot.mouseClicked(this)){
-            
+        showText("game over\n\npress r to restart", 300, 300);
+    }
+    
+    public void act(){
+        if(Greenfoot.isKeyDown( "r" ) ){
+            World home = new home();
             Greenfoot.setWorld(new home());
         }
     }
