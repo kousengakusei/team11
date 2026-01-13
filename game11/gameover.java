@@ -19,10 +19,15 @@ public class gameover extends World
         GreenfootImage image = new GreenfootImage(600,400);
         image.setColor(Color.BLACK);
         image.fill();
-        showText("game over", 300, 300);
-        if(Greenfoot.mouseClicked(this)){
+        showText("落単", 300, 200);
+        showText("リトライ 'R' ", 300, 250);
+    }
+    
+    public void act(){
+        if(Greenfoot.isKeyDown( "r" )){
             
-            Greenfoot.setWorld(new home());
+            World stage = new home();
+            Greenfoot.setWorld( stage );
         }
     }
 }

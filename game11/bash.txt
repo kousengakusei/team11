@@ -1,8 +1,6 @@
 cd z:
 cd ƒQ[ƒ€‚Ì‚Æ‚±‚ë‚Ü‚Å‚Æ‚Ô
 
-¦‚±‚Ì“_‚ÅGreenfoot‚Í•Â‚¶‚Ä‚¨‚­‚±‚Æ
-
 git status
 git add .
 git status
