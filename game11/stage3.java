@@ -16,10 +16,18 @@ public class stage3 extends World
     public stage3()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-        showText("stage3", 300, 300);
+        super(600, 400, 1);
+        showText("stage2\npress c", 300, 300);
         addObject( new textbox(), 300, 300 );
         TimerActor timer = new TimerActor(10);
         addObject(timer, 550, 10);
+    }
+    
+    public void act()
+    {
+        if( Greenfoot.isKeyDown( "c" ) ){
+            World stage = new clear();
+            Greenfoot.setWorld( stage );
+        }
     }
 }
