@@ -19,7 +19,8 @@ public class gameover extends World
         GreenfootImage image = new GreenfootImage(600,400);
         image.setColor(Color.BLACK);
         image.fill();
-        showText("game over\n\npress r to restart", 300, 300);
+        showText("落単", 300, 200);
+        showText("リトライ 'R' ", 300, 250);
     }
     
     public void act(){
