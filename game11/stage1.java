@@ -19,6 +19,7 @@ public class stage1 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         showText("stage1\ntype 「go stage2」", 300, 225);
+        addObject(new teacher(), 300, 250);
         addObject( new textbox(), 300, 300 );
         TimerActor timer = new TimerActor(10);
         addObject(timer, 550, 10);
