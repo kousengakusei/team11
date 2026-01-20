@@ -7,3 +7,5 @@ git status
 git commit -m "©•ª‚ª‚â‚Á‚½‚È‚¢‚æ‚¤‚Ì•Û‘¶"
 git pull --no-edit
 git push ¦‚±‚ê‚Í©•ª‚Ìì‹Æ‚ğXV
+
+git restore project.greenfoot ¢‚Á‚½‚ç‚â‚é
