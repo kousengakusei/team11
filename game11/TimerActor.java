@@ -28,6 +28,8 @@ public class TimerActor extends Actor {
             // 見た目を更新（文字サイズ24, 文字色BLACK, 背景透明）
             setImage(new GreenfootImage("Time: " + remainingTime, 24, Color.BLACK, new Color(0,0,0,0)));
         } else {
+            World gameover = new gameover();
+            Greenfoot.setWorld( gameover );
             Greenfoot.setWorld(new gameover());// 0秒になったら停止
         }
     }

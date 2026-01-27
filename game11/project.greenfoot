@@ -12,6 +12,7 @@ dependency1.from=clear
 dependency1.to=home
 dependency1.type=UsesDependency
 dependency10.from=stage2
+<<<<<<< HEAD
 dependency10.to=stage3
 dependency10.type=UsesDependency
 dependency11.from=stage1
@@ -35,13 +36,51 @@ dependency16.type=UsesDependency
 dependency17.from=KeyTypingManager
 dependency17.to=Trie
 dependency17.type=UsesDependency
+=======
+dependency10.to=TimerActor
+dependency10.type=UsesDependency
+dependency11.from=stage2
+dependency11.to=stage3
+dependency11.type=UsesDependency
+dependency12.from=stage2
+dependency12.to=inputdata
+dependency12.type=UsesDependency
+dependency13.from=stage1
+dependency13.to=teacher
+dependency13.type=UsesDependency
+dependency14.from=stage1
+dependency14.to=textbox
+dependency14.type=UsesDependency
+dependency15.from=stage1
+dependency15.to=TimerActor
+dependency15.type=UsesDependency
+dependency16.from=stage1
+dependency16.to=stage2
+dependency16.type=UsesDependency
+dependency17.from=stage1
+dependency17.to=inputdata
+dependency17.type=UsesDependency
+dependency18.from=gameover
+dependency18.to=home
+dependency18.type=UsesDependency
+dependency19.from=textbox
+dependency19.to=inputdata
+dependency19.type=UsesDependency
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 dependency2.from=home
 dependency2.to=KeyTypingManager2
 dependency2.type=UsesDependency
+dependency20.from=button
+dependency20.to=stage3
+dependency20.type=UsesDependency
+dependency21.from=TimerActor
+dependency21.to=gameover
+dependency21.type=UsesDependency
 dependency3.from=home
 dependency3.to=textbox
 dependency3.type=UsesDependency
 dependency4.from=home
+<<<<<<< HEAD
 dependency4.to=stage1
 dependency4.type=UsesDependency
 dependency5.from=stage3
@@ -66,6 +105,32 @@ editor.fx.0.y=0
 height=1047
 package.numDependencies=17
 package.numTargets=18
+=======
+dependency4.to=inputdata
+dependency4.type=UsesDependency
+dependency5.from=stage3
+dependency5.to=principal
+dependency5.type=UsesDependency
+dependency6.from=stage3
+dependency6.to=textbox
+dependency6.type=UsesDependency
+dependency7.from=stage3
+dependency7.to=TimerActor
+dependency7.type=UsesDependency
+dependency8.from=stage3
+dependency8.to=clear
+dependency8.type=UsesDependency
+dependency9.from=stage2
+dependency9.to=textbox
+dependency9.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=736
+editor.fx.0.y=247
+height=1056
+package.numDependencies=21
+package.numTargets=14
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -88,34 +153,51 @@ target1.width=80
 target1.x=0
 target1.y=0
 target10.height=50
+<<<<<<< HEAD
 target10.name=KeyTypingManager2
+=======
+target10.name=stage2
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=130
 target10.x=0
 target10.y=0
 target11.height=50
+<<<<<<< HEAD
 target11.name=teacher
+=======
+target11.name=TimerActor
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=stage3
+=======
+target12.name=stage1
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 target13.name=stage2
+=======
+target13.name=MyWorld
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=80
 target13.x=0
 target13.y=0
 target14.height=50
+<<<<<<< HEAD
 target14.name=TimerActor
 target14.showInterface=false
 target14.type=ClassTarget
@@ -150,6 +232,14 @@ target18.type=ClassTarget
 target18.width=110
 target18.x=0
 target18.y=0
+=======
+target14.name=gameover
+target14.showInterface=false
+target14.type=ClassTarget
+target14.width=110
+target14.x=0
+target14.y=0
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target2.height=50
 target2.name=textbox
 target2.showInterface=false
@@ -179,35 +269,51 @@ target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
+<<<<<<< HEAD
 target6.name=home
+=======
+target6.name=inputdata
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=80
 target6.x=0
 target6.y=0
 target7.height=50
+<<<<<<< HEAD
 target7.name=button
+=======
+target7.name=teacher
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
+<<<<<<< HEAD
 target8.name=principal
+=======
+target8.name=scenario
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=80
 target8.x=0
 target8.y=0
 target9.height=50
+<<<<<<< HEAD
 target9.name=KeyTypingManager
+=======
+target9.name=stage3
+>>>>>>> eceb1a39db26281a58574d87a5a291a8b63573a6
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=130
 target9.x=0
 target9.y=0
 version=3.0.0
-width=974
+width=1029
 world.lastInstantiated=home
-xPosition=953
-yPosition=0
+xPosition=362
+yPosition=26

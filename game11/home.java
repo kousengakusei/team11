@@ -13,7 +13,8 @@ public class home extends World
     /**
      * Constructor for objects of class home.
      * 
-     */    
+     */   
+    
 
     public home()
     {
@@ -21,13 +22,13 @@ public class home extends World
         super(600, 400, 1);
         man = new KeyTypingManager2();
         showText("堀坊の落単を阻止せよ！", 300, 200);
-        showText("press 「s」", 300, 300);
+        showText("type 「start」", 300, 225);
         addObject( new textbox(), 300, 300 );
     }
     
     public void act()
     {
-        if( Greenfoot.isKeyDown( "s" ) ){
+        if( inputdata.text.equals( "start" ) ){
             World stage = new stage1();
             Greenfoot.setWorld( stage );
         }

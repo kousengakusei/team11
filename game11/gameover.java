@@ -24,10 +24,9 @@ public class gameover extends World
     }
     
     public void act(){
-        if(Greenfoot.isKeyDown( "r" )){
-            
-            World stage = new home();
-            Greenfoot.setWorld( stage );
+        if(Greenfoot.isKeyDown( "r" ) ){
+            World home = new home();
+            Greenfoot.setWorld(new home());
         }
     }
 }
