@@ -10,48 +10,47 @@ public class home extends World
 {
     
     private int i = 0;
-    private boolean spacePressed = false;
+    private boolean spaceDown;
     
     /**
      * Constructor for objects of class home.
      * 
-     */    
-
+     */   
+    
     public home()
     {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
-        showText("堀坊の落単を阻止せよ！\n※テキストは'スペースキー'で進めます。", 300, 200);
-        showText("START 'space'", 300, 300);
+        super(600, 400, 1); 
+        showText("type 「start」", 300, 225);
         addObject( new textbox(), 300, 300 );
     }
     
     public void act()
     {
-        if (Greenfoot.isKeyDown("space")) { 
-            
-            if (!spacePressed) { 
-                
-                i++; spacePressed = true; 
-            } 
-        } else { 
-            
-            spacePressed = false; 
-        }
 
-        switch(i) { 
+        if ( inputdata.text.equals( "start" ) && i == 0) { 
             
-            case 0: 
-            showText("堀坊の落単を阻止せよ！\n※テキストは'スペースキー'で進めます。", 300, 200);
-            showText("START 'space'", 300, 300);
-            break; 
+            i++;
+        }
+        
+        if (spaceDown != Greenfoot.isKeyDown("space") && i >= 1) {
             
-            case 1: 
-            showText("ある日、堀坊はいつもの通りに高専に登校していた。", 300, 300); 
+            spaceDown = !spaceDown;
+            if (spaceDown) {
+                
+                i++;
+            }
+        }
+        
+        switch( i ) {
+                              
+            case 1:
+            showText("ある日、堀坊はいつもの通りに高専に登校していた。", 300, 300);
+            showText("※テキストは'スペースキー'で進めます。", 300, 375);
             break; 
             
             case 2: 
-            showText("登校中、堀坊はなぜだか胸騒ぎがした。", 300, 300); 
+            showText("登校中、堀坊はなぜだか胸騒ぎがした。", 300, 300);
             break; 
             
             case 3: 
@@ -95,9 +94,8 @@ public class home extends World
             break;
             
             case 13: 
-            World stage = new stage1();
-            Greenfoot.setWorld( stage );
+            Greenfoot.setWorld(new stage1());
             break;
         }
-    }
+    }   
 }
