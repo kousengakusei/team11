@@ -60,7 +60,7 @@ public class stage3 extends World
             break; 
             
             case 3:
-            timer = new TimerActor(10);
+            timer = new TimerActor(20);
             addObject(timer, 550, 10);
             
             showText(" ", 300, 300);
@@ -81,7 +81,7 @@ public class stage3 extends World
             break;
             
             case 5:
-            timer = new TimerActor(20);
+            timer = new TimerActor(50);
             addObject(timer, 550, 10);
             
             showText(" ", 300, 275);
@@ -102,7 +102,7 @@ public class stage3 extends World
             break;
             
             case 7:
-            timer = new TimerActor(40);
+            timer = new TimerActor(50);
             addObject(timer, 550, 10);
             
             showText(" ", 300, 300);
@@ -128,7 +128,7 @@ public class stage3 extends World
             break;
             
             case 10:
-            timer = new TimerActor(30);
+            timer = new TimerActor(50);
             addObject(timer, 550, 10);
             
             showText(" ", 300, 300);
@@ -154,7 +154,7 @@ public class stage3 extends World
             break;
             
             case 13:
-            timer = new TimerActor(30);
+            timer = new TimerActor(40);
             addObject(timer, 550, 10);
             
             showText(" ", 300, 300);
@@ -175,13 +175,13 @@ public class stage3 extends World
             break;
             
             case 15:
-            timer = new TimerActor(30);
+            timer = new TimerActor(40);
             addObject(timer, 550, 10);
             
             showText(" ", 300, 300);
             showText("堀　本当に良いんですね！校長先生、ありがとうございました！", 300,275);
             
-            man.append("ホントウニイインデスネコウチョウセンセイアリガトウゴザイマシタ！");
+            man.append("ホントウニイインデスネコウチョウセンセイアリガトウゴザイマシタ");
             showText(man.upcoming(),300, 300); 
             break;
             

@@ -64,6 +64,7 @@ public class home extends World
             case 2:
             showText(" ", 300, 200);
             showText(" ", 300, 275);
+            showText(" ", 300, 350);
             showText("ある日、堀坊はいつもの通りに高専に登校していた。", 300, 300);
             showText("※テキストは'スペースキー'で進めます。", 300, 375);
             break; 

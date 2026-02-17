@@ -71,7 +71,7 @@ public class stage2 extends World
                 removeObject(timer);
             }
             
-            timer = new TimerActor(40);
+            timer = new TimerActor(50);
             addObject(timer, 550, 10);
             
             showText(" ", 300, 300);
