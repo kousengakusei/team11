@@ -9,8 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class stage1 extends World
 {
     
-    private int i = 0;
-    private boolean spacePressed = false;
+    private int i = 1;
+    private boolean spaceDown;
+    KeyTypingManager2 man;
+    
+    private TimerActor timer;
     
     /**
      * Constructor for objects of class stage1.
@@ -21,81 +24,125 @@ public class stage1 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        showText("stage1\ntype 「go stage2」", 300, 225);
+        man = new KeyTypingManager2();
+        showText(" ", 300, 225);
         addObject(new teacher(), 300, 250);
-        addObject( new textbox(), 300, 300 );
-        TimerActor timer = new TimerActor(10);
-        addObject(timer, 550, 10);
     }
     
     public void act()
     {
+        if (man.upcoming().length() > 0 ) {
+            String s = Greenfoot.getKey();
+            if (s != null && s.length() == 1) {
+                man.onTyped((char)s.getBytes()[0]);
+                showText(man.upcoming(),300, 300);
+                if (man.upcoming().length() == 0) {
+                    i++;
+                }
+            }
+            return;
+        }
         
-        if ( inputdata.text.equals( "go stage2" ) ) { 
+        if (spaceDown != Greenfoot.isKeyDown("space")) {
             
-            if ( !spacePressed ) { 
+            spaceDown = !spaceDown;
+            if (spaceDown) {
                 
-                i++; spacePressed = true; 
-            } 
-        } else { 
-            
-        spacePressed = false; 
+                i++;
+            }
+        }
         
-    }
-
-        switch(i) { 
-            
-            case 0: 
-            showText("ある日、r堀坊はいつもの通りに高専に登校していた。", 300, 300); 
-            break; 
-            
-            case 1: 
-            showText("登校中、堀坊はなぜだか胸騒ぎがした。", 300, 300); 
+        switch( i ) {
+                              
+            case 1:
+            showText("「演習室」", 300, 300);
             break; 
             
             case 2: 
-            showText("教室に着いたとき、\nその胸騒ぎの答え合わせが目の前にあった。", 300, 300); 
+            showText("放課後... ", 300, 300);
             break; 
             
             case 3: 
-            showText("なぜなら、今日はレポート提出日だったのだから。", 300, 300); 
+            showText("堀　... ", 300, 300); 
             break;
             
             case 4: 
-            showText("レポートを出さなくては落単。", 300, 300); 
+            showText("先　堀坊君 ", 300, 300); 
             break;
             
             case 5: 
-            showText("今からレポートを作成するにはあまりにも現実的ではない。", 300, 300); 
+            showText("堀　...... ", 300, 300); 
             break;
             
             case 6: 
-            showText("そこで、堀坊は担当の先生に直談判することにした。", 300, 300); 
+            showText("先　堀坊君...!! ", 300, 300); 
             break;
             
             case 7: 
-            showText("しかし、担当の先生は話を聞いてくれない。", 300, 300); 
+            timer = new TimerActor(20);
+            addObject(timer, 550, 10);
+            
+            showText(" ", 300, 300);
+            showText("なんですか！今忙しいので黙っててください！", 300, 275);
+            
+            man.append("ナンデスカイマイソガシイノデダマッテテクダサイ");
+            showText(man.upcoming(),300, 300);
             break;
             
-            case 8: 
-            showText("そこで校長先生に直談判をしようと決めた。", 300, 300); 
+            case 8:
+            if ( timer != null) {
+                
+                removeObject(timer);
+            }
+            
+            showText(" ", 300, 275);
+            showText("先　今何時だと思っているんだ！\nレポート提出時間はとうに過ぎているぞ！ ", 300, 300);
             break;
             
-            case 9: 
-            showText("何事も、最高権力を行使すれば言うことを聞くはず。", 300, 300); 
+            case 9:
+            timer = new TimerActor(20);
+            addObject(timer, 550, 10);
+            
+            showText(" ", 300, 300);
+            showText(" ", 300, 275);
+            showText("堀　先生がこんなものを作らせるのが悪いんですよ！ ", 300, 275); 
+            
+            man.append("センセイガコンナモノヲツクラセルノガワルインデスヨ");
+            showText(man.upcoming(),300, 300);
             break;
             
-            case 10: 
-            showText("なんとか上手く言い訳をして、落単を阻止する。", 300, 300); 
+            case 10:
+            if ( timer != null) {
+                
+                removeObject(timer);
+            }
+            
+            showText(" ", 300, 300);
+            showText(" ", 300, 275);
+            showText("先　落単しても知らんからな！ ", 300, 275);
             break;
             
-            case 11: 
-            showText("すべては落単を回避するために___", 300, 300); 
+            case 11:
+            if ( timer != null) {
+                
+                removeObject(timer);
+            }
+            
+            showText(" ", 300, 300);
+            showText(" ", 300, 275);
+            showText("堀　えー！ ", 300, 275);
+            
+            man.append("エー");
+            showText(man.upcoming(),300, 300);
             break;
             
             case 12: 
             Greenfoot.setWorld(new stage2());
             break;
-        } 
+        }
+    }
+    
+    public void stopped() {
+        man.stop();
     }
 }
